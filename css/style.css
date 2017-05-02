@@ -3,7 +3,10 @@
 
 body {
 font: normal normal 13px/16px "Open Sans", sans-serif;
-background: #ccc;
+background-image: url(https://lh3.googleusercontent.com/BckeJalFroszJ8-favJmo0G1LRwLJgj2H3JI9kSrpy84rJkfKZRFhHwBHPdJR0EEhA=h310);
+}
+
+h1 {
 }
 
 .container{
@@ -48,16 +51,25 @@ padding: 5px 15px;
 
 .removeListItem:hover{
 cursor: pointer;
-opacity: .8;}
+opacity: .8;
+}
 
 ol {padding-left: 20px;}
 
 ol li {padding: 5px;color:#000;}
 
-ol li:nth-child(even){background: #dfdfdf;}
+ol li:nth-child(even){background: #b9daec;}
 
 .strike{text-decoration: line-through;}
 
 li:hover{
   cursor: pointer;
+ }
+
+ .removeButton {
+   border: none;
+   margin-left: 15px;
+   border-radius: 3px;
+   font-weight: 700;
+   background-color: rgba(218, 217, 210, 0.77);
  }
