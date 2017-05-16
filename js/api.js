@@ -7,7 +7,7 @@ export const callAjax = (lat, long, callback) => {
         }
     };
 
-    const url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&APPID=bb94bab4df5a7cab30cfe69cc504cdb1`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&APPID=bb94bab4df5a7cab30cfe69cc504cdb1`;
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
 };
