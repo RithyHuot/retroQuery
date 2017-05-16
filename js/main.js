@@ -1,7 +1,6 @@
 import { callAjax, ktof } from "./api.js";
 
 document.addEventListener('DOMContentLoaded', () => {
-  // const $button = $r('button');
   $r('.addListItem').on('click', () => {
     let list = $r('ol');
     let input = $r('#listItem').elements[0].value;
