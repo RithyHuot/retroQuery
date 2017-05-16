@@ -1,8 +1,11 @@
 module.exports = {
-  entry: "./lib/main.js",
+  entry: {
+    lib: "./lib/main.js",
+    js : "./js/main.js"
+  },
   output: {
     path: __dirname,
-    filename: "./lib/rQuery.js"
+    filename: "./lib/[name].rQuery.js"
 	},
 	devtool: "source-map"
 };

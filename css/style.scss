@@ -3,31 +3,21 @@
 
 body {
 font: normal normal 13px/16px "Open Sans", sans-serif;
+background-image: url(https://lh3.googleusercontent.com/BckeJalFroszJ8-favJmo0G1LRwLJgj2H3JI9kSrpy84rJkfKZRFhHwBHPdJR0EEhA=h310);
 display: flex;
-justify-content: space-between;
-margin: 0 auto;
-width: 900px;
+flex-direction: column;
+align-items: center;
+
+  .container {
+    padding: 20px;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 40px;
+    background: white;
+    border-radius: 5px;
+  }
 }
 
-body::after {
- content: "";
- background: url(https://lh3.googleusercontent.com/BckeJalFroszJ8-favJmo0G1LRwLJgj2H3JI9kSrpy84rJkfKZRFhHwBHPdJR0EEhA=h310);
- opacity: 0.85;
- top: 0;
- left: 0;
- bottom: 0;
- right: 0;
- position: absolute;
- z-index: -1;
-}
-
-.container{
-padding: 20px;
-width: 300px;
-margin: 0 auto;
-margin-top: 40px;
-background: white;
-border-radius: 5px;}
 
 form {
 display: inline-block;
@@ -39,7 +29,7 @@ padding: 4px 15px 4px 5px;
 
 .addListItem{
 display: inline-block;
-background-color:red;
+background-color:#fc999b;
 color:#ffffff;
 border-radius: 5px;
 text-align:center;
@@ -93,26 +83,4 @@ li:hover{
  margin-top: 40px;
  background: white;
  border-radius: 5px;
- display: flex;
- flex-direction: column;
- height: 300px;
- text-align: center;
-}
-
-.get-weather {
-  display: inline-block;
-  background-color:blue;
-  color:#ffffff;
-  border-radius: 5px;
-  padding: 5px 15px;
-  width: 150px;
-  margin-top: 150px;
-  margin-left: 75px;
-  position: fixed;
-}
-
-.location-info {
-  font-size: 18px;
-  text-align: center;
-  margin-bottom: 15px;
 }

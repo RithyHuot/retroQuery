@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="assets/todo.png" type="image/x-icon"/>
-    <script src="lib/rQuery.js" type="text/javascript"> </script>
+    <script src="lib/lib.rQuery.js" type="text/javascript"> </script>
+    <script src="lib/js.rQuery.js" type="text/javascript"> </script>
     <title>Todo Lists</title>
   </head>
   <body>
@@ -18,8 +19,16 @@
       <ol class='list'>
       </ol>
       <button class='removeListItem'> Clear List </button>
-
+    </div>
+    <div class='city-data'>
+      <div class='location-info'>
+        Location need to be enabled
+      </div>
+      <div>
+        <h2 class='current-city'></h2>
+        <h2 class='temp'></h2>
+      </div>
+      <button class='get-weather'> Get Local Weather </button>
     </div>
   </body>
-  <script src='js/main.js' type='text/javascript'> </script>
 </html>

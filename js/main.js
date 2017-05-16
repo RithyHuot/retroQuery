@@ -1,5 +1,7 @@
+import { callAjax, ktof } from "./api.js";
+
 document.addEventListener('DOMContentLoaded', () => {
-  const button = $r('button');
+  // const $button = $r('button');
   $r('.addListItem').on('click', () => {
     let list = $r('ol');
     let input = $r('#listItem').elements[0].value;
@@ -24,5 +26,31 @@ document.addEventListener('DOMContentLoaded', () => {
     $r('.removeListItem').on('click', () => {
       $r('li').remove();
     });
+  });
+
+  const getWeather = (string) => {
+    const weather = JSON.parse(string);
+    const kelvin = weather.main.temp;
+    const temp = ktof(kelvin);
+
+    let city = $r('.current-city');
+    let currentTemp = $r('.temp');
+
+    city.append(`<div> Current City: ${weather.name} </div>`);
+    currentTemp.append(`<div> Current Temp: ${temp} F</div>`);
+  };
+
+  const getLocation = () => {
+    let currentPos = navigator.geolocation;
+    currentPos.getCurrentPosition((pos) => {
+      let lat = pos.coords.latitude;
+      let long = pos.coords.longitude;
+      callAjax(lat, long, getWeather);
+    });
+  };
+
+  const $weatherButton = $r('.get-weather');
+  $weatherButton.on('click', () => {
+    getLocation();
   });
 });
