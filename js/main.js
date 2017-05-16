@@ -52,4 +52,36 @@ document.addEventListener('DOMContentLoaded', () => {
   $weatherButton.on('click', () => {
     getLocation();
   });
+
+  $r('.get-gify').on('click', () => {
+    addGrid();
+  });
+
+  let counter = 0;
+
+  const addGrid = () => {
+    $r.ajax({
+      method: 'GET',
+      url: 'https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&rating=pg',
+      success: data => addGifToGrid(data)
+    });
+  };
+
+  const addGifToGrid = data => {
+    const giphy = JSON.parse(data).data;
+    let gif = $r('.gif');
+    if (counter < 10) {
+      gif.append(`<img src=${giphy.fixed_width_small_url}>`);
+      counter += 1;
+    }
+
+    $r('.clear-gify').on('click', () => {
+      $r('img').remove();
+      counter = 0;
+      $r('.get-gify').on('click', () => {
+        addGrid();
+      });
+    });
+  };
+
 });

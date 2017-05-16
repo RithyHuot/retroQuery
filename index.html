@@ -9,26 +9,36 @@
     <title>Todo Lists</title>
   </head>
   <body>
-    <div class='container'>
-      <h1>Todo Lists</h1>
+    <div class='left'>
+      <div class='container'>
+        <h1>Todo Lists</h1>
+        <label for='listItem'>New List Item</lable>
+          <br>
+          <input id='listItem' type="text" class='userInput'></Input>
+          <button class='addListItem'> Add Item </button>
+          <ol class='list'>
+          </ol>
+          <button class='removeListItem'> Clear List </button>
+        </div>
+        <div class='city-data'>
+          <div class='location-info'>
+            Location need to be enabled
+          </div>
+          <div class='weather-data'>
+            <h2 class='current-city'></h2>
+            <h2 class='temp'></h2>
+          </div>
+          <button class='get-weather'> Get Local Weather </button>
+        </div>
+    </div>
 
-      <label for='listItem'>New List Item</lable>
-      <br>
-      <input id='listItem' type="text" class='userInput'></Input>
-      <button class='addListItem'> Add Item </button>
-      <ol class='list'>
-      </ol>
-      <button class='removeListItem'> Clear List </button>
-    </div>
-    <div class='city-data'>
-      <div class='location-info'>
-        Location need to be enabled
+    <div class='gif-container'>
+      <div class='gif'>
       </div>
-      <div>
-        <h2 class='current-city'></h2>
-        <h2 class='temp'></h2>
+      <div class='gify-button'>
+        <button class='get-gify'> Get GIFs </button>
+        <button class='clear-gify'> Clear GIFS </button>
       </div>
-      <button class='get-weather'> Get Local Weather </button>
-    </div>
+   </div>
   </body>
 </html>
