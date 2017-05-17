@@ -32,11 +32,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const kelvin = weather.main.temp;
     const temp = ktof(kelvin);
 
-    let city = $r('.current-city');
-    let currentTemp = $r('.temp');
-
-    city.append(`<div> Current City: ${weather.name} </div>`);
-    currentTemp.append(`<div> Current Temp: ${temp} F</div>`);
+    $r('.current-city').append(`<div> ${weather.name} </div>`);
+    $r('.temp').append(`<div>${temp} F </div>`);
+    $r('.min-temp').append(`<div>${ktof(weather.main.temp_min)} F </div>`);
+    $r('.max-temp').append(` <div>${ktof(weather.main.temp_max)}  F </div>`);
+    $r('.humidity').append(`<div>${weather.main.humidity}%</div>`);
+    $r('.current-weather').append(` <div>${weather.weather[0].description}</div>`);
   };
 
   const getLocation = () => {
@@ -78,9 +79,9 @@ document.addEventListener('DOMContentLoaded', () => {
     $r('.clear-gify').on('click', () => {
       $r('img').remove();
       counter = 0;
-      $r('.get-gify').on('click', () => {
-        addGrid();
-      });
+      // $r('.get-gify').on('click', () => {
+      //   addGrid();
+      // });
     });
   };
 
