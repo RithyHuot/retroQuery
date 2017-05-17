@@ -4,13 +4,14 @@
 body {
   font: normal normal 13px/16px "Open Sans", sans-serif;
   display: flex;
+  background: url(https://wallpaperlost.com/images/city-desktop-wallpaper-9.jpg);
   justify-content: space-between;
   flex-direction: column;
   margin: 0 auto;
   width: 900px;
 }
 
-body::after {
+/*body::after {
  content: "";
  background: url(https://wallpaperlost.com/images/city-desktop-wallpaper-9.jpg);
  top: 0;
@@ -19,7 +20,7 @@ body::after {
  right: 0;
  position: absolute;
  z-index: -1;
-}
+}*/
 
 .left {
   display: flex;
